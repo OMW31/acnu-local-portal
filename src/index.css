@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* TAILWIND V4 THEME — mapped to our CSS variables                    */
+/* ------------------------------------------------------------------ */
+@theme inline {
+  --color-brand-bg: var(--bg);
+  --color-brand-secondary: var(--bg-secondary);
+  --color-brand-card: var(--bg-card);
+  --color-brand-primary: var(--primary);
+  --color-brand-accent: var(--accent);
+  --color-brand-text: var(--text-primary);
+  --color-brand-text-muted: var(--text-muted);
+  --color-brand-border: var(--border);
+
+  --font-display: var(--heading-font);
+  --font-body: var(--body-font);
+  --font-drama: var(--drama-font);
+  --font-mono: var(--mono-font);
+  
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+}
+
+/* ------------------------------------------------------------------ */
+/* ACNU — 3 CULTURALLY-ROOTED THEMES                                  */
+/* ------------------------------------------------------------------ */
+
+@layer base {
+
+  /* ── THEME 1: SAVANE DORÉE ──────────────────────────── */
+  [data-theme="savane"] {
+    --bg: #FAF6F0;
+    --bg-secondary: #F2ECE2;
+    --bg-card: #FFFFFF;
+    --bg-dark: #2C1810;
+    --bg-dark-secondary: #3D2518;
+
+    --text-primary: #2C1810;
+    --text-secondary: #6B5744;
+    --text-muted: #9C8B7A;
+    --text-on-dark: #FAF6F0;
+    --text-on-dark-muted: #C4B5A4;
+
+    --accent: #C9893B;
+    --accent-hover: #B37A32;
+    --accent-subtle: rgba(201, 137, 59, 0.12);
+    --accent-glow: rgba(201, 137, 59, 0.3);
+
+    --primary: #009EDB;
+    --primary-hover: #0082B3;
+    --primary-subtle: rgba(0, 158, 219, 0.1);
+
+    --border: rgba(44, 24, 16, 0.1);
+    --border-strong: rgba(44, 24, 16, 0.2);
+
+    --heading-font: 'Plus Jakarta Sans', sans-serif;
+    --body-font: 'Plus Jakarta Sans', sans-serif;
+    --drama-font: 'Cormorant Garamond', serif;
+    --mono-font: 'IBM Plex Mono', monospace;
+
+    --radius-lg: 1.25rem;
+    --radius-xl: 2rem;
+    --radius-2xl: 3rem;
+
+    --hero-overlay: linear-gradient(to top, rgba(44, 24, 16, 0.9) 0%, rgba(44, 24, 16, 0.3) 100%);
+    --noise-opacity: 0.04;
+
+    color-scheme: light;
+  }
+
+  /* ── THEME 2: FORÊT ÉQUATORIALE ─────────────────────── */
+  [data-theme="foret"] {
+    --bg: #0F1F17;
+    --bg-secondary: #162A1F;
+    --bg-card: #1A3326;
+    --bg-dark: #0A1610;
+    --bg-dark-secondary: #0D1B13;
+
+    --text-primary: #E8F0EB;
+    --text-secondary: #A8C4B3;
+    --text-muted: #6B8F7A;
+    --text-on-dark: #E8F0EB;
+    --text-on-dark-muted: #7A9F8A;
+
+    --accent: #4ADE80;
+    --accent-hover: #22C55E;
+    --accent-subtle: rgba(74, 222, 128, 0.12);
+    --accent-glow: rgba(74, 222, 128, 0.2);
+
+    --primary: #34D399;
+    --primary-hover: #10B981;
+    --primary-subtle: rgba(52, 211, 153, 0.1);
+
+    --border: rgba(232, 240, 235, 0.08);
+    --border-strong: rgba(232, 240, 235, 0.15);
+
+    --heading-font: 'Space Grotesk', sans-serif;
+    --body-font: 'Space Grotesk', sans-serif;
+    --drama-font: 'DM Serif Display', serif;
+    --mono-font: 'Space Mono', monospace;
+
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2.5rem;
+
+    --hero-overlay: linear-gradient(to top, rgba(15, 31, 23, 0.95) 0%, rgba(15, 31, 23, 0.3) 100%);
+    --noise-opacity: 0.06;
+
+    color-scheme: dark;
+  }
+
+  /* ── THEME 3: NUIT DE YAOUNDÉ ───────────────────────── */
+  [data-theme="nuit"] {
+    --bg: #0D0D16;
+    --bg-secondary: #14142A;
+    --bg-card: #1A1A36;
+    --bg-dark: #08080F;
+    --bg-dark-secondary: #0B0B18;
+
+    --text-primary: #F0EDE8;
+    --text-secondary: #B0A89E;
+    --text-muted: #6E675F;
+    --text-on-dark: #F0EDE8;
+    --text-on-dark-muted: #8A8279;
+
+    --accent: #C9A84C;
+    --accent-hover: #D4B65E;
+    --accent-subtle: rgba(201, 168, 76, 0.12);
+    --accent-glow: rgba(201, 168, 76, 0.25);
+
+    --primary: #4A8FCC;
+    --primary-hover: #5DA3E0;
+    --primary-subtle: rgba(74, 143, 204, 0.12);
+
+    --border: rgba(240, 237, 232, 0.07);
+    --border-strong: rgba(240, 237, 232, 0.14);
+
+    --heading-font: 'Inter', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --drama-font: 'Playfair Display', serif;
+    --mono-font: 'JetBrains Mono', monospace;
+
+    --radius-lg: 1.5rem;
+    --radius-xl: 2.5rem;
+    --radius-2xl: 4rem;
+
+    --hero-overlay: linear-gradient(to top, rgba(13, 13, 22, 0.95) 0%, rgba(13, 13, 22, 0.3) 100%);
+    --noise-opacity: 0.05;
+
+    color-scheme: dark;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* GLOBAL STYLES                                                      */
+/* ------------------------------------------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Default Theme fallback */
+  --hero-overlay: linear-gradient(to top, rgba(44, 24, 16, 0.9) 0%, rgba(44, 24, 16, 0.3) 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  transition: background-color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Noise Overlay ───────────────────────────────────────── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: var(--noise-opacity, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  transition: opacity 0.6s ease;
+}
+
+/* ── Utilities ───────────────────────────────────────────── */
+
+/* Dynamic font classes to keep compatibility with Phase A markup */
+.font-display  { font-family: var(--heading-font); }
+.font-drama    { font-family: var(--drama-font); }
+.font-sans     { font-family: var(--body-font); }
+.font-mono     { font-family: var(--mono-font); }
+
+/* Magnetic Button (Phase A + Orchids enhanced) */
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+}
+
+.magnetic-btn:hover {
+  transform: scale(1.03) translateY(-1px);
+}
+
+.magnetic-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.12);
+  transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.magnetic-btn:hover::before { top: 0; }
+
+.magnetic-btn > span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrolled Navbar (Phase A) */
+nav.nav-scrolled > div {
+  background-color: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Protocol sticky section (Phase A) */
+.protocol-card {
+  will-change: transform, opacity, filter;
+}
+
+/* Card base (Orchids extracted for Phase B) */
+.card-premium {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-premium:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -15px var(--accent-glow);
+  border-color: var(--accent-subtle);
+}
+
+/* Ndop Pattern Overlay */
+.ndop-pattern {
+  background-image:
+    linear-gradient(45deg, var(--text-primary) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--text-primary) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--text-primary) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--text-primary) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
